@@ -44,4 +44,13 @@ public abstract class Animal {
     //public String getHealthStatus() { return "";}
 
     public abstract void makeSound();
+
+    public String getHealthStatus() {
+        if (health > 80 ) {
+            return "Healthy and Happy!";
+        } else if (health < 80 && health > 50) {
+            return "A bit tired";
+        }
+        return "";
+    }
 }

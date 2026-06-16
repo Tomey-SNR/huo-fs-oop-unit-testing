@@ -68,4 +68,22 @@ public class AnimalTest {
 
         assertEquals(100, lion.getHealth());
     }
+
+    @Test
+    void TestGetHealthStatus_HealthAbove80() {
+        Animal parrot = new Parrot("Parrot", 5,85);
+        String health = parrot.getHealthStatus();
+
+        assertEquals("Healthy and Happy!", health);
+
+    }
+
+    @Test
+    void TestGetHealthStatus_HealthAbove50LessThan80() {
+        Animal parrot = new Parrot("Parrot", 4,70);
+        String health = parrot.getHealthStatus();
+
+        assertEquals("A bit tired", health);
+
+    }
 }
